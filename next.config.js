@@ -6,6 +6,42 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Configuración para solucionar errores de HMR
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+        ignored: /node_modules/,
+      }
+      
+      // Configuración adicional para HMR
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            // vendor chunk
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+            },
+          },
+        },
+      }
+    }
+    return config
+  },
+  
+  // Configuración experimental para estabilidad
+  experimental: {
+    optimizeCss: false,
+    esmExternals: 'loose',
+  },
+  
   // Optimizaciones de imágenes
   images: {
     formats: ['image/webp', 'image/avif'],
