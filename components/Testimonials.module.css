@@ -1,0 +1,140 @@
+.testimonials {
+  background-color: var(--color-light-gray);
+  padding: 100px 0;
+}
+
+.testimonialsIntro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.testimonialCard {
+  background-color: var(--color-white);
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.starFilled {
+  color: #FFD700;
+  font-size: 1rem;
+}
+
+.starEmpty {
+  color: #E0E0E0;
+  font-size: 1rem;
+}
+
+.testimonialText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-teal);
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.authorName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin: 0 0 0.3rem 0;
+}
+
+.authorRole {
+  font-size: 0.9rem;
+  color: var(--color-teal);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 60px 0;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonialCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .testimonialsIntro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .testimonialText {
+    font-size: 1rem;
+  }
+  
+  .authorImage {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .authorName {
+    font-size: 1rem;
+  }
+}
+

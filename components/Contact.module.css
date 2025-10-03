@@ -1,0 +1,371 @@
+.contact {
+  background-color: var(--color-white);
+  padding: 100px 0;
+}
+
+.contactIntro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contactInfo h3 {
+  font-size: 1.8rem;
+  color: var(--color-charcoal);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contactIcon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-teal);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contactDetails h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.contactDetails p {
+  color: var(--color-charcoal);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contactLink {
+  background: none;
+  border: none;
+  color: var(--color-teal);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+  padding: 0;
+}
+
+.contactLink:hover {
+  color: #006666;
+}
+
+.socialMedia {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--color-light-gray);
+}
+
+.socialMedia h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-teal);
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: #006666;
+  transform: translateY(-3px);
+}
+
+.contactCta {
+  display: flex;
+  align-items: center;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.ctaCard h3 {
+  font-size: 1.6rem;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ctaCard p {
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ctaButtons .btn-primary,
+.ctaButtons .btn-secondary {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btnIcon {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contactInfo h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contactIntro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contactItem {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .contactDetails {
+    text-align: center;
+  }
+  
+  .ctaCard {
+    padding: 2.5rem 2rem;
+  }
+  
+  .ctaCard h3 {
+    font-size: 1.4rem;
+  }
+  
+  .ctaCard p {
+    font-size: 1rem;
+  }
+  
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+/* Formulario de contacto */
+.contactForm {
+  display: flex;
+  align-items: center;
+}
+
+.formCard {
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.formCard h3 {
+  font-size: 1.6rem;
+  color: var(--color-charcoal);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formCard p {
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--color-charcoal);
+  font-size: 0.95rem;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: var(--color-white);
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #999;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Mensaje de éxito */
+.successMessage {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+  border-radius: 12px;
+  border: 2px solid #4caf50;
+}
+
+.successIcon {
+  font-size: 3rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.successMessage h4 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.successMessage p {
+  color: #2e7d32;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive para formulario */
+@media (max-width: 968px) {
+  .contactForm {
+    margin-top: 2rem;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .formCard {
+    padding: 2.5rem 2rem;
+  }
+  
+  .formCard h3 {
+    font-size: 1.4rem;
+  }
+  
+  .formCard p {
+    font-size: 0.95rem;
+  }
+  
+  .formInput,
+  .formSelect,
+  .formTextarea {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.95rem;
+  }
+  
+  .submitBtn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
