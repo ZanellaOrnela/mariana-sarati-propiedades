@@ -23,7 +23,7 @@ const WhatsAppButton = () => {
   }, [])
 
   const openWhatsApp = () => {
-    const phoneNumber = '5491123456789'
+    const phoneNumber = '5491121921888'
     const message = encodeURIComponent('Hola! Me interesa obtener información sobre sus servicios inmobiliarios.')
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank')
   }

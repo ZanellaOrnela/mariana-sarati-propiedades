@@ -10,7 +10,6 @@ export default function Testimonials() {
       author: "María González",
       role: "Compradora",
       rating: 5,
-      image: "/images/testimonial1.jpg"
     },
     {
       id: 2,
@@ -18,7 +17,6 @@ export default function Testimonials() {
       author: "Carlos Rodríguez",
       role: "Vendedor",
       rating: 5,
-      image: "/images/testimonial2.jpg"
     },
     {
       id: 3,
@@ -26,7 +24,6 @@ export default function Testimonials() {
       author: "Ana Martínez",
       role: "Inversionista",
       rating: 5,
-      image: "/images/testimonial3.jpg"
     }
   ]
 
@@ -68,15 +65,6 @@ export default function Testimonials() {
               </p>
               
               <div className={styles.testimonialAuthor}>
-                <img 
-                  src={testimonial.image} 
-                  alt={`Foto de ${testimonial.author}, cliente de Mariana Sarati Propiedades`}
-                  className={styles.authorImage}
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                  }}
-                />
                 <div className={styles.authorInfo}>
                   <h4 className={styles.authorName}>{testimonial.author}</h4>
                   <p className={styles.authorRole}>{testimonial.role}</p>

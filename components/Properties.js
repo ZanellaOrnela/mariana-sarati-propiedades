@@ -4,55 +4,56 @@ import styles from './Properties.module.css'
 import { FaBed, FaBath, FaCar, FaMapMarkerAlt } from 'react-icons/fa'
 
 const Properties = () => {
-  // Datos mock de propiedades
-  const properties = [
+  // Galería de medios de propiedades (fotos reales de Google Drive)
+  const propertyMedia = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Casa moderna en Palermo",
-      location: "Palermo, CABA",
-      description: "Hermosa casa de 3 ambientes con jardín privado, totalmente renovada con materiales de primera calidad.",
-      price: "USD 450.000",
-      bedrooms: 3,
-      bathrooms: 2,
-      parking: 1,
-      type: "Venta"
+      type: "image",
+      src: "https://lh3.googleusercontent.com/d/1DbelOH5e637qbWnmwngg8pDO5udYHng2",
+      alt: "Propiedad 1 - Casa moderna en Palermo",
+      title: "Casa moderna en Palermo"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Departamento en Puerto Madero",
-      location: "Puerto Madero, CABA",
-      description: "Moderno departamento de 2 ambientes con vista al río, amenities completos y ubicación premium.",
-      price: "USD 320.000",
-      bedrooms: 2,
-      bathrooms: 1,
-      parking: 1,
-      type: "Venta"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Casa familiar en San Isidro",
-      location: "San Isidro, GBA Norte",
-      description: "Amplia casa familiar de 4 ambientes con piscina, quincho y gran parque. Ideal para familias.",
-      price: "ARS 85.000/mes",
-      bedrooms: 4,
-      bathrooms: 3,
-      parking: 2,
-      type: "Alquiler"
+      type: "image",
+      src: "https://lh3.googleusercontent.com/d/1G32uCbkdv-DEZmfwlgPsGNZ5b1jFJ8Lz",
+      alt: "Propiedad 2 - Departamento en Puerto Madero",
+      title: "Departamento en Puerto Madero"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      title: "Loft en Villa Crespo",
-      location: "Villa Crespo, CABA",
-      description: "Moderno loft de 1 ambiente con diseño contemporáneo, ideal para jóvenes profesionales.",
-      price: "ARS 45.000/mes",
-      bedrooms: 1,
-      bathrooms: 1,
-      parking: 0,
-      type: "Alquiler"
+      type: "image",
+      src: "https://lh3.googleusercontent.com/d/18jiOwrewkGa0t-d9UCAMGKI1TnlVUUpO",
+      alt: "Propiedad 4 - Loft en Villa Crespo",
+      title: "Loft en Villa Crespo"
+    },
+    {
+      id: 5,
+      type: "image",
+      src: "https://lh3.googleusercontent.com/d/1ayMM2MAajQM3K8eedm_SzSR8SqJbazSN",
+      alt: "Propiedad 5 - Casa en Barrio Norte",
+      title: "Casa en Barrio Norte"
+    },
+    {
+      id: 6,
+      type: "video",
+      src: "https://drive.google.com/file/d/1ThZ1SkY2eHp5WR8mp-s0ez_y-QT8rnlI/preview?usp=embed_facebook&chrome=0&toolbar=0&navpanes=0&scrollbar=0&view=FitH",
+      alt: "Video Propiedad 6 - Casa con jardín",
+      title: "Casa con jardín"
+    },
+    {
+      id: 7,
+      type: "video",
+      src: "https://drive.google.com/file/d/1ie08sptBEBZenSqxN7o3z6JO2N8UEPyp/preview?usp=embed_facebook&chrome=0&toolbar=0&navpanes=0&scrollbar=0&view=FitH",
+      alt: "Video Propiedad 7 - Departamento moderno",
+      title: "Departamento moderno"
+    },
+    {
+      id: 8,
+      type: "video",
+      src: "https://drive.google.com/file/d/1AGdyIUoDpS9M_MoWzbEw2pj3mgEjLV1y/preview?usp=embed_facebook&chrome=0&toolbar=0&navpanes=0&scrollbar=0&view=FitH",
+      alt: "Video Propiedad 8 - Casa familiar",
+      title: "Casa familiar"
     }
   ]
 
@@ -73,60 +74,26 @@ const Properties = () => {
         </p>
         
         <div className={styles.propertiesGrid}>
-          {properties.map((property) => (
-            <div key={property.id} className={styles.propertyCard}>
-              <div className={styles.propertyImageContainer}>
-                <img 
-                  src={property.image} 
-                  alt={`${property.title} - ${property.type} en ${property.location}`}
-                  className={styles.propertyImage}
-                  loading="lazy"
-                />
-                <div className={styles.propertyType}>
-                  {property.type}
-                </div>
-              </div>
-              
-              <div className={styles.propertyContent}>
-                <h3 className={styles.propertyTitle}>{property.title}</h3>
-                
-                <div className={styles.propertyLocation}>
-                  <FaMapMarkerAlt className={styles.locationIcon} />
-                  <span>{property.location}</span>
-                </div>
-                
-                <p className={styles.propertyDescription}>
-                  {property.description}
-                </p>
-                
-                <div className={styles.propertyFeatures}>
-                  <div className={styles.feature}>
-                    <FaBed />
-                    <span>{property.bedrooms}</span>
-                  </div>
-                  <div className={styles.feature}>
-                    <FaBath />
-                    <span>{property.bathrooms}</span>
-                  </div>
-                  {property.parking > 0 && (
-                    <div className={styles.feature}>
-                      <FaCar />
-                      <span>{property.parking}</span>
-                    </div>
-                  )}
-                </div>
-                
-                <div className={styles.propertyFooter}>
-                  <div className={styles.propertyPrice}>
-                    {property.price}
-                  </div>
-                  <button 
-                    onClick={scrollToContact}
-                    className="btn-primary"
+          {propertyMedia.map((media) => (
+            <div key={media.id} className={styles.propertyCard}>
+              <div className={styles.mediaContainer}>
+                {media.type === "image" ? (
+                  <img 
+                    src={media.src} 
+                    alt={media.alt}
+                    className={styles.propertyMedia}
+                    loading="lazy"
+                  />
+                ) : (
+                  <iframe 
+                    src={media.src}
+                    className={styles.propertyMedia}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    title={media.alt}
                   >
-                    Ver más
-                  </button>
-                </div>
+                  </iframe>
+                )}
               </div>
             </div>
           ))}
@@ -137,7 +104,7 @@ const Properties = () => {
             onClick={scrollToContact}
             className="btn-secondary"
           >
-            Ver todas las propiedades
+            Contactarme
           </button>
         </div>
       </div>

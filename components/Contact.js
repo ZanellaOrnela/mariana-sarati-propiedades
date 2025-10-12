@@ -45,7 +45,7 @@ const Contact = () => {
   }
 
   const openWhatsApp = () => {
-    const phoneNumber = '5491123456789'
+    const phoneNumber = '5491121921888'
     const message = encodeURIComponent('Hola, me interesa obtener asesoramiento inmobiliario.')
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank')
   }
@@ -59,11 +59,11 @@ const Contact = () => {
   }
 
   const sendEmail = () => {
-    window.open('mailto:info@marianasaratipropiedades.com?subject=Consulta%20Inmobiliaria', '_blank')
+    window.open('mailto:marianasarati@gmail.com?subject=Consulta%20Inmobiliaria', '_blank')
   }
 
   const makeCall = () => {
-    window.open('tel:+541123456789', '_self')
+    window.open('tel:+541121921888', '_self')
   }
 
   return (
@@ -85,7 +85,7 @@ const Contact = () => {
               </div>
               <div className={styles.contactDetails}>
                 <h4>Dirección</h4>
-                <p>Av. Santa Fe 1234, Piso 5, Oficina A<br />Palermo, CABA, Argentina</p>
+                <p>Lavalle 1783 piso 7 B<br />CABA, Argentina</p>
               </div>
             </div>
             
@@ -97,7 +97,7 @@ const Contact = () => {
                 <h4>Teléfono</h4>
                 <p>
                   <button onClick={makeCall} className={styles.contactLink}>
-                    +54 11 2345-6789
+                    +54 9 11 2192-1888
                   </button>
                 </p>
               </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                 <h4>WhatsApp</h4>
                 <p>
                   <button onClick={openWhatsApp} className={styles.contactLink}>
-                    +54 9 11 2345-6789
+                    +54 9 11 2192-1888
                   </button>
                 </p>
               </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                 <h4>Email</h4>
                 <p>
                   <button onClick={sendEmail} className={styles.contactLink}>
-                    info@marianasaratipropiedades.com
+                    marianasarati@gmail.com
                   </button>
                 </p>
               </div>
@@ -165,7 +165,7 @@ const Contact = () => {
                 </div>
               ) : (
                 <form 
-                  action="https://formsubmit.co/info@marianasaratipropiedades.com" 
+                  action="https://formsubmit.co/marianasarati@gmail.com" 
                   method="POST"
                   onSubmit={handleSubmit}
                   className={styles.form}
